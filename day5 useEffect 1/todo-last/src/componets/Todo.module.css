@@ -1,0 +1,15 @@
+.list{
+    display:flex;
+    background-color:#a9d5c0;
+   
+    text-align: center;
+    justify-content:center;
+    width:25%;
+    margin:auto;
+    margin-top: 10px;
+    justify-content:space-between;
+
+    font-weight: 600;
+    font-size:21px;
+;
+}
