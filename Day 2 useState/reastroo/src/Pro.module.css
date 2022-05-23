@@ -1,0 +1,21 @@
+#main{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    line-height: 5px;
+    gap: 5%;
+
+}
+#main img {
+   width: 100px;
+   height: 100%;
+
+}
+h3{
+ margin-top: 10px;
+}
+
+button{
+  
+   
+    color: green;
+}
