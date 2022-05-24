@@ -1,0 +1,23 @@
+.tasks {
+  /* sample */
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid black;
+  gap: 10px;
+}
+
+.empty {
+  /* sample */
+  width: 50%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+    gap: 10px;
+}
