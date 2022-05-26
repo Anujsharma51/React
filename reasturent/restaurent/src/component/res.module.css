@@ -1,0 +1,16 @@
+.nav{
+    padding: 20px;
+    background-color: aquamarine;
+    display: flex;
+    gap: 20px;
+}
+.main{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    
+}
+.list img{
+    width: 100px;
+}
+
