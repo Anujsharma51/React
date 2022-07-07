@@ -1,16 +1,16 @@
-import React from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
-import { Google } from "../pages/Google";
-import SignIn from "../pages/SignIn";
-import SignUp from "../pages/SignUp";
-
+import React, { useContext } from "react";
+import { Outlet, useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 const Login = () => {
+  const { signin, handleClick } = useContext(AuthContext);
   const navigate = useNavigate();
   return (
     <h1>
       <button
         onClick={() => {
-          navigate("sign-in");
+          handleClick(true);
+
+          return navigate("/user");
         }}
       >
         sign-in
@@ -29,13 +29,7 @@ const Login = () => {
       >
         sign-with google
       </button>
-
-      <Routes>
-        <Route path="sign-in" element={<SignIn />}></Route>
-
-        <Route path="sign-up" element={<SignUp />}></Route>
-        <Route path="sign-in-google" element={<Google />}></Route>
-      </Routes>
+      <Outlet />
     </h1>
   );
 };

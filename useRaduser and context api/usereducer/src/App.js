@@ -1,14 +1,33 @@
+import { useReducer } from "react";
 import "./App.css";
-import Button1 from "./com/Button1";
-import { useContext } from "react";
-import { AppContext } from "./com/AppContextProvider";
+const init = { count: 0, name: "gajraj" };
+const reducer = (state, action) => {
+  if (action.type === "count") {
+    return { ...state, count: state.count + action.paylord };
+  } else if (action.type === "name") {
+    return { ...state, name: action.paylord };
+  }
+  return state;
+};
 function App() {
-  const [toggleTheme] = useContext(AppContext);
+  const [state, dispatch] = useReducer(reducer, init);
+  const handleClick = () => {
+    dispatch({ type: "count", paylord: 1 });
+  };
+  console.log("state:", state);
+
+  // console.log("state:", state);
   return (
     <div className="App">
-      <Button1 text="theam" />
-
-      <button onClick={toggleTheme}>toogle</button>
+      <button onClick={handleClick}>wqdwq</button>
+      <button
+        onClick={() => {
+          dispatch({ type: "name", paylord: "anuj" });
+        }}
+      >
+        defef
+      </button>
+      {state.count}
     </div>
   );
 }

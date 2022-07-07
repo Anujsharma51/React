@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+
 const User = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -9,12 +10,13 @@ const User = () => {
       setData(res.data.data);
     });
   }, []);
+
   return (
     <>
       user
       {data.map((el) => {
         return (
-          <div>
+          <div key={el.id}>
             <img src={el.avatar} alt="a" />
             <div>{el.first_name}</div>
             <div>{el.last_name}</div>
